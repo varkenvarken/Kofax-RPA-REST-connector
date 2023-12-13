@@ -1,0 +1,67 @@
+{
+	"name": "RESTconnector",
+	"actions": [
+		{
+			"name": "call",
+			"type": "python",
+			"parameters": [
+				{
+					"name": "endpoint",
+					"type": "string"
+				},
+				{
+					"name": "method",
+					"type": "string",
+                    "optional": true,
+					"default": "POST"
+				},
+				{
+					"name": "header1",
+					"type": "string",
+                    "optional": true
+				},
+				{
+					"name": "header2",
+					"type": "string",
+                    "optional": true
+				},
+				{
+					"name": "header3",
+					"type": "string",
+                    "optional": true
+				},
+				{
+					"name": "header4",
+					"type": "string",
+                    "optional": true
+				},
+				{
+					"name": "header5",
+					"type": "string",
+                    "optional": true
+				},
+				{
+					"name": "body",
+					"type": "string",
+					"optional": true
+				}
+			],
+			"commandline": ["from restconnector import RESTwebservice; rpa_return = RESTwebservice.call2(endpoint=%1, method=%2, header1=%3, header2=%4, header3=%5, header4=%6, header5=%7, body=%8)"]
+		},
+		{
+			"name": "extract",
+			"type": "python",
+			"parameters": [
+				{
+					"name": "json",
+					"type": "string"
+				},
+				{
+					"name": "attr",
+					"type": "string"
+				}
+			],
+			"commandline": ["from extractjson import ExtractJSON; rpa_return = ExtractJSON.extract(string=%1, attr=%2)"]
+		}
+    	]
+}
