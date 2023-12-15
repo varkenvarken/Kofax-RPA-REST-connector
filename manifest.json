@@ -62,6 +62,21 @@
 				}
 			],
 			"commandline": ["from extractjson import ExtractJSON; rpa_return = ExtractJSON.extract(string=%1, attr=%2)"]
+		},
+		{
+			"name": "extract with JSONPath",
+			"type": "python",
+			"parameters": [
+				{
+					"name": "json",
+					"type": "string"
+				},
+				{
+					"name": "path",
+					"type": "string"
+				}
+			],
+			"commandline": ["from extractjson import ExtractJSON; rpa_return = ExtractJSON.extract_with_path(string=%1, path=%2)"]
 		}
     	]
 }
